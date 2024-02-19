@@ -30,7 +30,7 @@ Route::middleware('auth')->group(function () {
 });
 // New route for the chirps 
 Route::resource('chirps', ChirpController::class)
-    ->only(['index', 'store', 'edit', 'update'])
+    ->only(['index', 'store', 'edit', 'update', 'destroy'])
     ->middleware(['auth', 'verified']);
     
 require __DIR__.'/auth.php';

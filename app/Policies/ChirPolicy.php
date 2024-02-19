@@ -49,7 +49,7 @@ class ChirPolicy
      */
     public function delete(User $user, Chirp $chirp): bool
     {
-        //
+        return $this->update($user, $chirp);
     }
 
     /**
